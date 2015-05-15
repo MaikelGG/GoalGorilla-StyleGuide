@@ -19,3 +19,4 @@ tmp
 build
 bin
 !bin/hologram
+node_modules

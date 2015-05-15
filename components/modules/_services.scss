@@ -1,0 +1,63 @@
+.services-slope {
+  margin: 120px -50px 0;
+  height: 400px;
+  transform-origin: left center;
+  background-color: $blue;
+  transform: rotate(-5deg);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+
+  img {
+    display: none;
+  }
+
+  .illustration {
+    background: url('../images/png/sprites3.0.png') 50% -80px / 300px auto no-repeat;
+    position: relative;
+    transform: rotate(5deg);
+    height: 200px;
+    max-width: 726px;
+
+    @include breakpoint($tab) {
+      background-size: 550px auto;
+      background-position: 30px -170px;
+    }
+
+    @include breakpoint($desk) {
+      background-size: auto auto;
+      background-position: 50% -250px;
+    }
+
+  }
+
+  + .triangle {
+    margin-top: -300px;
+  }
+}
+
+.view-main-services {
+  position: relative;
+  z-index: 2;
+  background: $white;
+
+  .views-row {
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+.view-sub-ser {
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li a {
+      padding: 7px 0 0 40px;
+      display: block;
+      background: url("../images/png/sprites3.0.png") -52px 0/auto 280px no-repeat;
+    }
+
+    margin-bottom: 30px;
+}

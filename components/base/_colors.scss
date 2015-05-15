@@ -1,0 +1,89 @@
+/*doc
+---
+title: Colors
+name: colors
+category: index
+---
+
+We have a few colors that can be used in various contexts.
+
+<section class="cardbox">
+  <div class='cardholder'>
+    <div class='card'>
+      <div class='color' style='background: #000000'>#000000</div>
+      <h3>$black</h3>
+    </div>
+  </div>
+  <div class='cardholder'>
+    <div class='card'>
+      <div class='color' style='background: #FFFFFF; color: #000000'>#FFFFFF</div>
+      <h3>$white</h3>
+    </div>
+  </div>
+  <div class='cardholder'>
+    <div class='card'>
+      <div class='color' style='background: #36a9e0'>#36a9e0</div>
+      <h3>$blue</h3>
+    </div>
+  </div>
+  <div class='cardholder'>
+    <div class='card'>
+      <div class='color' style='background: #d9d9d9'>#d9d9d9</div>
+      <h3>$grey</h3>
+    </div>
+  </div>
+  <div class='cardholder'>
+    <div class='card'>
+      <div class='color' style='background: #ECECEC'>#ECECEC</div>
+      <h3>$lightgrey</h3>
+    </div>
+  </div>
+</section>
+
+*/
+
+//sections
+.cardbox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+.cardholder {
+  flex: 0 1 50%;
+  padding: 0 1.5em 1.5em 0;
+
+  @include breakpoint($tab) {
+    flex: 0 1 20%;
+  }
+
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, .3);
+  backface-visibility: hidden;
+  background-clip: padding-box;
+  background: none repeat scroll 0 0 $white;
+  position: relative;
+  text-align: center;
+  font-size: $t1;
+  letter-spacing: .05em;
+
+  .color {
+    padding: .5em 0;
+    color: $white;
+  }
+
+
+  h3 {
+    padding: .5em 0;
+    font-size: $t1;
+    font-weight: 300;
+    line-height: 1.5em;
+
+  }
+
+}

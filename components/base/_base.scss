@@ -1,0 +1,74 @@
+/*doc
+---
+title: Introduction
+name: introduction
+category: Home
+---
+
+<div class="block-box box-blue">
+  <h2 class="heading1 white">GoalGorilla <br /> <span class="black"> Styleguide</span> </h2>
+  <p>Document design and code.</p>
+</div>
+
+*/
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+
+[hidden],
+template {
+  display: none;
+}
+
+
+@-webkit-viewport { width: device-width; height: device-height; }
+@-moz-viewport { width: device-width; height: device-height;}
+@-ms-viewport { width: device-width; height: device-height;}
+@-o-viewport { width: device-width; height: device-height;}
+@viewport { width: device-width; height: device-height;}
+
+body {
+  margin: 0;
+  background: $white;
+  text-rendering: optimizeLegibility;
+  color: $black;
+  font-family: 'Museo300', Arial, Helvetica, sans-serif;
+  font-size: $t1;
+  word-wrap: break-word;
+}
+
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+
+body .SnapABug_Button {
+  display: none !important;
+}
+
+.SnapABug_Button img#SnapABug_bImg {
+  display: none !important;
+  opacity: 0;
+}

@@ -1,0 +1,269 @@
+// ------------------------------------------
+// RESPONSIVE NAV
+// ------------------------------------------
+
+.nav-collapse {
+
+  list-style: none;
+  width: 100%;
+  float: right;
+
+  @include breakpoint($desk) {
+    width: auto;
+    max-width: 740px
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    @include breakpoint($desk) {
+      position: relative;
+    }
+  }
+
+  li {
+    width: 100%;
+    display: block;
+    float: left;
+
+    @include breakpoint($desk) {
+      width: auto;
+      line-height: 100px;
+    }
+  }
+
+  a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    color: $white;
+    font-family: 'Museo500';
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: .7em 1em;
+    width: 100%;
+    background: $black;
+    position: relative;
+    border-top: 1px solid lighten($black, 10%);
+    line-height: 1.5em;
+
+
+    @include breakpoint($desk) {
+      width: auto;
+      float: left;
+      border: none;
+      text-align: center;
+      line-height: 100px;
+      padding: 0 30px;
+
+      &:hover {
+        color: $blue;
+      }
+
+    }
+
+  }
+
+  li.last a {
+    padding-right: 0;
+  }
+
+  a:active,
+  .active a {
+    color: $blue;
+  }
+
+  @include breakpoint($desk) {
+    .label {
+      display: inline-block;
+      background: #575757;
+      border-radius: 7px;
+      text-align: center;
+      padding: 0 15px;
+      line-height: 25px;
+      transition: all 275ms ease;
+    }
+
+    a:active .label,
+    a:hover .label,
+    .active a .label {
+      color: $white;
+      background: $blue;
+    }
+
+  }
+
+
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@include breakpoint($desk) {
+  .js .nav-collapse {
+    position: relative;
+  }
+
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+}
+
+// ------------------------------------------
+// BREADCRUMB
+// ------------------------------------------
+
+
+/*doc
+---
+title: Breadcrumbs
+name: breadcrumbs
+category: index
+---
+
+Breadcrumbs can be found on each page except the homepage. Since it is used  for navigation we use the `<nav>` element.
+
+```html_example
+  <nav class="breadcrumb" role="navigation">
+    <div class="wrapper">
+      <span class="item first"><a href="/">home</a></span>
+      <span class="separator">></span>
+      <span class="item"><a href="/oplossingen">oplossingen</a></span>
+    </div>
+  </nav>
+```
+
+*/
+
+.breadcrumb {
+  display:    none;
+  width:      100%;
+  z-index:    10;
+  background: $white;
+
+  @include breakpoint($tab) {
+    display: block;
+    padding: 15px 0px;
+    font-size: 13px;
+  }
+
+  .item.first {
+    padding-left: 10px;
+  }
+}
+
+// ------------------------------------------
+// MASK
+// ------------------------------------------
+
+.mask {
+  -webkit-transition: opacity 300ms;
+  -moz-transition: opacity 300ms;
+  transition: opacity 300ms;
+  background: rgba(0,0,0, .5);
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  z-index: 9;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.android .mask {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.js-nav-active .mask {
+  visibility: visible;
+  opacity: 1;
+}
+
+@include breakpoint($desk) {
+  .mask {
+    display: none !important;
+    opacity: 0 !important;
+  }
+}
+
+
+// ------------------------------------------
+// NAV TOGGLE STYLES
+// ------------------------------------------
+@font-face {
+  font-family: "responsivenav";
+  src:url("../icons/responsivenav.eot");
+  src:url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"),
+  url("../icons/responsivenav.ttf") format("truetype"),
+  url("../icons/responsivenav.woff") format("woff"),
+  url("../icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nav-toggle {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  padding-right: 50px;
+  float: right;
+  color: $white;
+  font-family: 'Museo500';
+}
+
+.nav-toggle:before {
+  font: normal 28px/60px "responsivenav"; // Edit font-size (28px) to change the icon size
+  text-transform: none;
+  text-align: center;
+  position: absolute;
+  content: "\2261"; // Hamburger icon
+  text-indent: 0;
+  speak: none;
+  width: 1em;
+  right: 10px;
+  top: 0;
+}
+
+.nav-toggle.active:before {
+  font-size: 24px;
+  content: "\78"; // Close icon
+}

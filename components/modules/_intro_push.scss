@@ -1,0 +1,41 @@
+//html, body, .container, .node-header {
+//  height: 100%;
+//}
+//
+//.intro-effect-push:not(.notrans) .node-header,
+//.intro-effect-push:not(.notrans) .article-full {
+//  transition-property: opacity, transform;
+//  transition-duration: 1s;
+//}
+//
+//.intro-effect-push:not(.notrans) .node-header {
+//  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+//  transition-duration: 1.2s;
+//}
+//
+//.intro-effect-push .node-header {
+//  position: absolute;
+//  z-index: 1500;
+//}
+//
+//.intro-effect-push .article-full {
+//  transform: translateY(400px);
+//  opacity: 0;
+//}
+//
+//.intro-effect-push.modify .article-full {
+//  transform: translateY(0);
+//  opacity: 1;
+//}
+//
+//.intro-effect-push.modify .node-header {
+//  opacity: 0;
+//  transform: translateY(-100%) scale(0.9);
+//}
+//
+//// Delays
+//
+//.intro-effect-push.modify:not(.notrans) .article-full {
+//  transition-delay: 0.6s;
+//}
+//

@@ -1,0 +1,111 @@
+/*doc
+---
+title: Node compact
+name: node-compact
+category: index
+---
+
+Compact nodes are used to display on overview of nodes, like news and services.
+
+```html_example
+<div class="view-solutions">
+  <div class="views-row">
+    <a href="#" class="node-compact">
+      <header>
+        <h2> Service title </h2>
+      </header>
+      <article>
+        <span class="node-button-area"><span class="readmore-arrow"></span> <span class="button"> Bekijk deze oplossing </span></span>
+      </article>
+    </a>
+  </div>
+</div>
+```
+*/
+
+.view-solutions,
+.view-news {
+
+  .view-header {
+    p {
+      margin: 15px 0;
+    }
+  }
+
+  a.more-link {
+    display: block;
+    text-align: center;
+    margin: 40px 0px;
+    color: $black;
+    text-decoration: underline;
+  }
+
+  a.node-compact {
+    display: block;
+    background: $grey;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 7px;
+
+    header {
+      float: left;
+      width: 85%;
+
+      @include breakpoint($tab) {
+        width: 50%;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    .node-button-area {
+      margin-top: 2px;
+
+      .button {
+        display: none;
+
+        @include breakpoint($tab) {
+          display: block;
+          float: right;
+        }
+      }
+    }
+  }
+
+  &.view-display-id-front_section {
+
+    margin-top: 30px;
+  }
+
+  &.view-display-id-2_most_recent {
+
+    h2 {
+      color: $blue;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li a {
+      padding: 7px 0 0 40px;
+      display: block;
+      background: url("../images/png/sprites3.0.png") -52px 0/auto 280px no-repeat;
+    }
+
+    margin-bottom: 30px;
+
+  }
+
+}
+
+.view-solutions a.node-compact h2 {
+
+  line-height: 32px;
+  margin: 0;
+
+  @include breakpoint($tab) {
+    line-height: 46px;
+  }
+}

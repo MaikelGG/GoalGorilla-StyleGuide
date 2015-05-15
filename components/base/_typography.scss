@@ -1,0 +1,218 @@
+/*doc
+---
+title: Typography
+name: typography
+category: index
+---
+
+These are the heading sizes that you can use site wide.
+
+```html_example
+<h1 class="heading1">This is an heading 1 element</h1>
+```
+```html_example
+<h2 class="heading2">This is an heading 2 element</h2>
+```
+```html_example
+<h3 class="heading3">This is an heading 3 element</h3>
+```
+```html_example
+<p>Je wilt graag je users bereiken en binden aan je merk. Om dat te bereiken halen we alles uit de kast. We gebruiken onze eigen krachten waar nodig om jouw doelstellingen te behalen. Ontdek hoe compleet we zijn.</p>
+```
+*/
+
+//
+// FONT FAMILIES
+//
+
+@font-face {
+  font-family: 'Museo300';
+  src: url('../font/museo300.eot');
+  src: url('../font/museo300.eot?#iefix') format('embedded-opentype'),
+       url('../font/museo300.woff') format('woff'),
+       url('../font/museo300.ttf') format('truetype'),
+       url('../font/museo300.svg#Museo300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo500';
+  src: url('../font/museo500.eot');
+  src: url('../font/museo500.eot?#iefix') format('embedded-opentype'),
+       url('../font/museo500.woff') format('woff'),
+       url('../font/museo500.ttf') format('truetype'),
+       url('../font/museo500.svg#Museo500') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo700';
+  src: url('../font/museo700.eot');
+  src: url('../font/museo700.eot?#iefix') format('embedded-opentype'),
+       url('../font/museo700.woff') format('woff'),
+       url('../font/museo700.ttf') format('truetype'),
+       url('../font/museo700.svg#Museo700') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+p {
+  font-size: $t1;
+  line-height: 21px;
+  margin: 0;
+
+  @include breakpoint($desk) {
+    font-family: 'Museo500';
+  }
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+small {
+  font-size: 80%;
+}
+
+a {
+  background: transparent;
+  text-decoration: none;
+  color: $black;
+  transition: all 275ms ease;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: normal;
+  font-family: 'Museo700';
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+
+.heading1,
+.heading2,
+.heading3 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Museo500';
+  font-weight: normal;
+}
+
+.heading1 {
+  @extend %heading3;
+
+  @include breakpoint($tab) {
+    @include heading1;
+  }
+
+}
+
+.heading2 {
+  @extend %heading3;
+
+  @include breakpoint($tab) {
+    @include heading2;
+  }
+
+}
+
+.heading3 {
+  @extend %heading3;
+}
+
+
+.text2 {
+  font-family: 'Museo500';
+}
+
+
+.white {
+  color: $white;
+}
+
+.black {
+  color: $black;
+}
+
+.blue {
+  color: $blue;
+}
+
+.article-full {
+
+  h1, h2, h3 {
+    @extend %heading3;
+    color: $blue;
+    margin: 20px 0 0;
+    line-height: 1.3em;
+    font-family: 'Museo500';
+    font-weight: normal;
+    @include breakpoint($tab) {
+      margin: 30px 0 0;
+    }
+  }
+
+  p {
+    line-height: 1.6em;
+  }
+
+  a {
+    color: $blue;
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($blue, 15%);
+    }
+  }
+
+}

@@ -1,0 +1,32 @@
+.about {
+  background-image: url('../images/UserGlass_About.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding: 0 0 10px;
+  position: relative;
+  margin-top: -60px;
+
+  @include breakpoint($tab) {
+    min-height: 700px;
+    min-height: 100vh;
+  }
+
+  @include breakpoint($desk) {
+    margin-top: -100px;
+  }
+
+  + .divider {
+    margin-top: -85px;
+    position: relative;
+  }
+
+  .block-box {
+    margin-top: 180px;
+
+    @include breakpoint($tab) {
+      margin-top: 20vh;
+      margin-left: 20px;
+    }
+  }
+}

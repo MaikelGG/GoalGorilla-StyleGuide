@@ -1,0 +1,60 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+  font-family: 'Museo500';
+  font-weight: normal;
+  border-bottom: 2px solid black;
+  padding: 6px 0;
+
+  @include breakpoint($tab) {
+    + th {
+      padding-left: 30px;
+    }
+  }
+
+}
+
+tbody tr:first-child td {
+  padding-top: 10px;
+}
+
+tbody td {
+  border-right: 2px solid $black;
+  line-height: 1.5em;
+  font-family: 'Museo500';
+  line-height: 1.3em;
+  padding: 10px 5px 5px 0;
+
+  @include breakpoint($tab) {
+    padding: 2px 20px 2px 0;
+  }
+
+  + td {
+    border: none;
+    padding-left: 5px;
+    font-family: 'Museo300';
+  }
+
+  @include breakpoint($tab) {
+
+    + td {
+      padding-left: 30px;
+    }
+
+  }
+
+}
+
+
+th, td {
+  vertical-align: top;
+}
+
+.file {
+  display: block;
+  word-break: break-all;
+}

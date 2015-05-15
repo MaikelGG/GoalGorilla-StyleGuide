@@ -1,0 +1,71 @@
+@include breakpoint($desk) {
+
+  #page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+}
+
+.wrapper,
+.section {
+  position: relative;
+  padding: 0 10px;
+  margin: 0 auto;
+  width: 100%;
+  @extend %clear;
+
+  @include breakpoint($desk) {
+    max-width: 960px;
+  }
+
+  @include breakpoint($deskplus) {
+    padding: 0;
+  }
+
+}
+
+#main {
+  position: relative;
+  overflow: hidden;
+  margin-top: 59px;
+
+  @include breakpoint($desk) {
+    margin-top: 99px;
+    flex: 1;
+  }
+}
+
+.path-user #main {
+
+  @include breakpoint($desk) {
+    margin-top: 145px;
+  }
+}
+
+.section {
+  @extend %clear;
+}
+
+@include breakpoint($tab) {
+  .align-left,
+  .pull-left {
+    float: left;
+  }
+
+  .align-right,
+  .pull-right {
+    float: right;
+  }
+
+  .align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+.visually-hidden {
+  @extend %element-invisible;
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title><%= title %> -  GoalGorilla Styleguide</title>
+    <link rel="shortcut icon" href="static/favicon.ico" />
+
+    <!-- Styleguide CSS -->
+    <link type="text/css" rel="stylesheet" href="static/css/docs.css">
+    <link type="text/css" rel="stylesheet" href="static/css/github.css">
+
+    <!-- CSS to be documented -->
+    <link rel="stylesheet" href="build/css/styles.css">
+
+  </head>
+  <body>
+    <div id="page">
+
+      <header class="header" id="header" aria-label="Site navigation" >
+        <div class="wrapper">
+          <a href="#main" title="Home" rel="home" class="site-logo" data-scroll="">
+            <img src="http://www.goalgorilla.com/themes/custom/gg/logo.png" alt="Home" />
+          </a>
+          <nav class="nav-collapse" data-scroll-header>
+            <ul>
+            <li class="menu-item visually-hidden"><a href="#main" data-scroll>home</a></li>
+            <% @blocks.each do |block| %>
+              <li class="menu-item"><a href="#<%= block[:name] %>" data-scroll><%= block[:title] %></a></li>
+            <% end %>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main" role="main">
+
+        <div class="section">

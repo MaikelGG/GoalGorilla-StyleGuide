@@ -1,0 +1,29 @@
+#content-bottom {
+  background: $lightgrey;
+}
+
+.footer {
+  background: $black;
+  color: $white;
+  line-height: 2em;
+  padding: 10px 0;
+  overflow: hidden;
+  font-size: $small;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @include breakpoint($tab) {
+    font-size: $t1;
+    line-height: 40px;
+  }
+
+  a {
+    @extend %white;
+    display: block;
+
+    &:hover {
+      @extend %grey;
+    }
+  }
+}

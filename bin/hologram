@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-require 'hologram'
-require 'hologram/cli'
-
-cli = Hologram::CLI.new(ARGV)
-cli.run

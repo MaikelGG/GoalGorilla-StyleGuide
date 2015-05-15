@@ -1,0 +1,38 @@
+.label-agile {
+  position: absolute;
+  right: 15px;
+  top: 35px;
+  background: rgba($black, .9);
+  border-radius: 7px;
+  width: 100px;
+  padding: 30px 10px 10px;
+  transform: rotate(5deg);
+  font-size: $small;
+  line-height: 1.35em;
+
+  a {
+    color: $white;
+    font-family: 'Museo500';
+    display: block;
+    transform: rotate(-5deg);
+  }
+
+  .title {
+    display: block;
+    line-height: 26px; // match arrow
+    text-indent: 5px;
+  }
+
+  @include breakpoint($desk) {
+    top: 75px;
+  }
+}
+
+.label-agile--arrow {
+  display: block;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  float: right;
+  background: url('../images/png/sprites3.0.png') -45px 0 / auto 240px no-repeat;
+}

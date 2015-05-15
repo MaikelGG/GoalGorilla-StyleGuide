@@ -1,0 +1,163 @@
+/* Easiest way to get the breadcrumb to disappear :D */
+body.path-kerst .breadcrumb {
+  display: none;
+}
+
+.christmas-mask {
+  visibility: visible;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  @include breakpoint($tab) {
+    visibility: hidden;
+  }
+}
+
+/* The header with form positioning */
+.christmas {
+  background-image: url('../images/Kerst_header.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding: 0 0 10px;
+  position: relative;
+  min-height: 300px;
+  margin-top: -100px;
+  z-index: 0;
+
+  @include breakpoint($tab) {
+    min-height: 700px;
+    min-height: 100vh;
+  }
+
+  .christmas-form-wrapper {
+    margin-top: 35vh;
+    margin-bottom: 5vh;
+    background: none;
+
+    @include breakpoint($tab) {
+      margin-top: 40vh;
+      margin-left: 80px;
+      margin-bottom: 0vh;
+    }
+
+    h2.first {
+      font-family: "Museo700";
+      font-size: 1.4em;
+      @include breakpoint($tab) {
+        font-size: 1.7em;
+        max-width: 380px;
+      }
+    }
+
+    h2.second {
+      font-family: "Museo300";
+      font-size: 1.2em;
+      @include breakpoint($tab) {
+        font-size: 1.7em;
+        max-width: 455px;
+      }
+    }
+  }
+}
+
+/* The actual form */
+.christmas-form {
+  max-width: 360px;
+
+  input {
+    width: 100%;
+  }
+
+  @include breakpoint($tab) {
+    .form-item-name {
+      display: inline-block;
+      width: 62%;
+      margin-right: 3%;
+    }
+  }
+
+  // The text fields.
+  .form-text {
+    border-radius: 3px;
+    border: none;
+    padding: 0.5em;
+    font-size: $t2;
+    font-family: "Museo300";
+    margin-bottom: 10px;
+  }
+
+  // The button.
+  .form-submit {
+    background: #953333;
+    color: $white;
+    display: inline-block;
+    float: none;
+    margin: 0px;
+    border: none;
+    padding: 0.5em;
+    font-size: $t2;
+    border-radius: 5px;
+
+    @include breakpoint($tab) {
+      width: 33%;
+    }
+  }
+}
+
+#messages {
+  position: absolute;
+  top: -50px;
+
+  @include breakpoint($tab) {
+    top: -100px;
+  }
+}
+
+/* The posted greetings */
+#greeting {
+  margin-top: 2em;
+  padding: 0 15px;
+  position: relative;
+
+  h1 {
+    margin-top: 0.83em;
+    margin-bottom: 0em;
+    font-family: "Museo700";
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-family: "Museo300";
+    font-size: 1.5em;
+
+    &.sub {
+      margin-top: 0em;
+    }
+  }
+
+  .greetings {
+    margin-bottom: 40px;
+  }
+
+  .greeting {
+    margin-top: 40px;
+
+    .message {
+      font-family: "Museo300";
+      font-size: 1.15em;
+    }
+
+    .author {
+      font-family: "Museo300";
+      font-size: 1.15em;
+      color: $blue;
+    }
+  }
+}

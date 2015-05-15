@@ -1,0 +1,139 @@
+.block-box {
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  @extend %clear;
+
+  @include breakpoint($tab) {
+    width: 460px;
+    padding: 30px;
+  }
+
+  p {
+    margin-top: $margin;
+  }
+
+}
+
+.box-blue {
+  background-color: rgba($blue, 0.9);
+}
+
+.box-black {
+  background-color: rgba($black, 0.9);
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+}
+
+.box-white {
+  padding: 0 10px;
+
+  @include breakpoint($tab) {
+    padding: 0 20px;
+    width: 80%;
+    max-width: 960px;
+  }
+
+}
+
+.section-title {
+  min-width: 140px;
+  clear: both;
+  margin: 15px 0;
+  @extend %bluelabel;
+
+  @include breakpoint($tab) {
+    margin: 80px 0 45px 20px;
+  }
+}
+
+.contact .section-title {
+  margin-left: 0;
+}
+
+.block-download-attachment {
+  margin: 30px 0px 60px;
+  padding: 0 !important;
+  border: 1px solid rgba($blue, 0.9);
+
+  label + div {
+    margin-bottom: 10px;
+  }
+
+  div.field-name-field-lead-name {
+    margin-bottom: 10px;
+  }
+
+  div.field-name-field-lead-telephone {
+    margin-top: 10px;
+  }
+
+  div.form-item input {
+    padding: 5px 12px;
+    background: $lightgrey;
+    border: 1px solid $grey;
+    font-weight: normal;
+    font-family: 'Museo700';
+    border-radius: 5px;
+    width: 100%;
+
+    @include breakpoint($tab) {
+      width: 355px;
+    }
+  }
+
+  span.header {
+    display: inline-block;
+    float: none;
+    padding: 0 15px;
+    line-height: 21px;
+    background: $white;
+    border-radius: 7px;
+    font-family: 'Museo500';
+    color: $black;
+  }
+
+  .heading1 {
+    margin-top: 15px;
+  }
+
+  .block-element {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .lead-add-form .form-actions {
+    text-align: right;
+  }
+
+  .block-bottom {
+    background: $white;
+    border-radius: 0px 0px 12px 12px;
+
+    .button {
+      border-radius: 50%;
+      background: $blue;
+      color: $white;
+      padding: 12px 16px;
+      border: 0px;
+      float: none;
+
+      @include breakpoint($tab) {
+        margin: -36px 0px 0px;
+        float: right;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.path-nieuws .section-title {
+  margin: 15px 0 30px;
+}

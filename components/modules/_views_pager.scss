@@ -1,0 +1,56 @@
+ul.pager__items {
+
+  list-style-type: none;
+
+  text-align: center;
+  margin: 20px auto;
+  padding: 0;
+
+  li.pager__item {
+    // float: left;
+    margin: 0px;
+    background: $grey;
+    display: inline-block;
+
+    a {
+      color: $white;
+      display: block;
+      padding: 5px 10px;
+    }
+
+    &.is-active {
+      a {
+        color: $black;
+        font-size: $t2;
+      }
+    }
+
+    &.pager__item--previous {
+      border-radius: 5px 0px 0px 5px;
+      a {
+        color: $black;
+      }
+    }
+    &.pager__item--next {
+      border-radius: 0px 5px 5px 0px;
+      a {
+        color: $black;
+      }
+      // a {
+      //   background: url("../images/png/sprites3.0.png") -52px 0/auto 280px no-repeat;
+      // }
+
+      // a span {
+      //   display: none;
+      // }
+    }
+
+    &.pager__item--ellipsis,
+    &.pager__item--last,
+    &.pager__item--first {
+      display: none;
+    }
+  }
+
+
+}

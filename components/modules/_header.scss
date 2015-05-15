@@ -1,0 +1,33 @@
+#header {
+  position:   fixed;
+  width:      100%;
+  left:       0;
+  top:        0;
+  z-index:    10;
+  background: $black;
+  max-height: 100px;
+}
+
+.site-logo {
+  float: left;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  line-height: 60px;
+  width: 130px;
+  padding: 0 10px;
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    width: auto;
+  }
+
+  @include breakpoint($desk) {
+    line-height: 100px;
+    width: 220px;
+
+    img {
+      height: auto;
+    }
+  }
+}

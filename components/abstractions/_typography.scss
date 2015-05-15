@@ -1,0 +1,55 @@
+@mixin heading1 {
+  font-size: $h1;
+  line-height: $h1 + 1px;
+}
+
+%heading1 {
+  @include heading1;
+}
+
+@mixin heading2 {
+  font-size: $h2;
+  line-height: $h2 + 1px;
+}
+
+%heading2 {
+  @include heading2;
+}
+
+@mixin heading3 {
+  font-size: $h3;
+  line-height: $h3 + 2px;
+}
+
+%heading3 {
+  @include heading3;
+}
+
+
+%bluelabel {
+  background: $blue;
+  color: $white;
+  padding: 0 15px;
+  line-height: 25px;
+  font-family: 'Museo500';
+  border-radius: 7px;
+  text-align: center;
+  display: inline-block;
+}
+
+
+%white {
+  color: $white;
+}
+
+%black {
+  color: $black;
+}
+
+%blue {
+  color: $blue;
+}
+
+%grey {
+  color: gray;
+}

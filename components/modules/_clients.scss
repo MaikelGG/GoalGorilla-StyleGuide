@@ -1,0 +1,22 @@
+.clienttable {
+  margin: $margin 0 90px;
+}
+
+.client-logo-container {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  background: $grey;
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+}
+
+.client-logo {
+  display: inline-block;
+
+  img {
+    margin-top: 25px;
+    display: block;
+  }
+}

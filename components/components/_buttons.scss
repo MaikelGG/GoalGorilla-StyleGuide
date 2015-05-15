@@ -1,0 +1,65 @@
+/*doc
+---
+title: Buttons
+name: buttons
+category: index
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example
+
+<button class="button">Click</button>
+<a class="button" href="http://www.goalgorilla.com">Don't click</a>
+```
+
+```html_example
+<span class="readmore-arrow"></span>
+```
+*/
+
+.button {
+  border: none;
+  font-size: $t1;
+  display: inline-block;
+  margin: 5px 10px 0 0;
+  padding: 0 15px;
+  line-height: 21px;
+  background: $white;
+  border-radius: 7px;
+  font-family: 'Museo500';
+
+  @include breakpoint($tab) {
+    margin: 15px 20px 0 0;
+  }
+
+  .divider-button-area-left & {
+    float: left;
+    margin: 15px 0 0 20px;
+  }
+
+}
+
+.readmore-arrow,
+.goback-arrow {
+  width: 30px;
+  height: 30px;
+  float: right;
+  display: block;
+  background: url('../images/png/sprites3.0.png') -52px 0 / auto 280px no-repeat;
+
+  @include breakpoint($tab) {
+    width: 46px;
+    height: 46px;
+    background-size: auto auto;
+    background-position: -80px 0;
+  }
+}
+
+@include breakpoint($tab) {
+  .goback-arrow {
+    background-position: 0 0;
+    float: left;
+  }
+}

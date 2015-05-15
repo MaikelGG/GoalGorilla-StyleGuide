@@ -1,0 +1,98 @@
+.node-header {
+  position: relative;
+
+  .not-front #main > & {
+    padding: 60px 0 30px;
+
+    // stretch the image or background to 100% of the viewport height, then pull it under the fixed menu.
+    @include breakpoint($tab) {
+      height: 100%;
+      height: 100vh;
+      min-height: 100%;
+      min-height: 100vh;
+      padding: 120px 0 30px;
+    }
+  }
+
+  .view-sub-ser &,
+  .front & {
+    padding: 20px 0;
+
+    @include breakpoint($tab) {
+      padding: 100px 0;
+    }
+
+  }
+
+}
+
+@include breakpoint($desk) {
+
+  .node-header,
+  .node-header .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+}
+
+
+.node-bg-img {
+  display: block;
+  backface-visibility: hidden;
+  background-color: $grey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 100%;
+
+  .view-sub-ser &,
+  .front & {
+    box-shadow: inset 0 0 10px $black;
+  }
+}
+
+.node-small-img {
+  @extend %element-hidden;
+
+  @include breakpoint($desk) {
+    display: block;
+    float: right;
+    margin-left: $margin;
+    max-width: 30%;
+  }
+
+}
+
+.node-button-area {
+  @extend %clear;
+  display: block;
+  margin-top: $margin;
+}
+
+.article-full {
+  width: 100%;
+  background-color: $white;
+  padding: 30px 0;
+  margin: 0;
+
+  ul, ol {
+    padding: 0;
+    font-family: 'Museo500';
+    list-style-position: inside;
+    line-height: 1.5em;
+
+    ul, ol {
+      padding-left: 1em;
+    }
+  }
+
+  p:first-of-type {
+    font-size: 1.2em;
+    font-family: 'Museo500';
+  }
+
+}
+

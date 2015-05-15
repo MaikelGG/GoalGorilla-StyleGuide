@@ -1,0 +1,65 @@
+.view-sub-ser .view-header,
+.divider {
+  @extend %element-hidden;
+}
+
+@include breakpoint($desk) {
+
+  .view-sub-ser .view-header,
+  .divider {
+    display: block;
+    width: 100%;
+    background: $blue;
+    height: 86px;
+  }
+
+  .divider-text {
+    @include grid-span(7,1);
+    line-height: 45px;
+    background: url('../images/png/sprites3.0.png') no-repeat 0 -150px;
+    padding: 20px 0 20px 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .divider-button-area,
+  .divider-button-area-right {
+    @include grid-span(6,7);
+    display: block;
+    padding: 20px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .divider-button-area-left {
+    @include grid-span(6,1);
+    display: block;
+    padding: 20px 0;
+    overflow: hidden;
+  }
+
+}
+
+@include breakpoint($tab) {
+
+  .triangle {
+    width: 100px;
+    z-index: 5;
+    position: relative;
+    height: 100px;
+    border-radius: 0 0 15px 0;
+    margin: -80px auto -40px;
+    transform: rotate(45deg);
+  }
+
+  .triangle-white {
+    background: linear-gradient(-45deg, $white 50%, transparent 50%);
+  }
+
+  .triangle-blue {
+    background: linear-gradient(-45deg, $blue 50%, transparent 50%);
+  }
+
+}
