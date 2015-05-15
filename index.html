@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
 
-    <title> -  GoalGorilla Styleguide</title>
+    <title>index -  GoalGorilla Styleguide</title>
     <link rel="shortcut icon" href="static/favicon.ico" />
 
     <!-- Styleguide CSS -->
@@ -14,9 +14,6 @@
 
     <!-- CSS to be documented -->
     <link rel="stylesheet" href="build/css/styles.css">
-
-    <!-- component js and init scripts -->
-    <script src="build/script/components.js"></script>
 
   </head>
   <body>
@@ -29,9 +26,18 @@
           </a>
           <nav class="nav-collapse" data-scroll-header>
             <ul>
-              
-                <li class="menu-item"><a href="atoms.html">Atoms</a></li>
-              
+            <li class="menu-item visually-hidden"><a href="#main" data-scroll>home</a></li>
+            
+              <li class="menu-item"><a href="#breadcrumbs" data-scroll>Breadcrumbs</a></li>
+            
+              <li class="menu-item"><a href="#buttons" data-scroll>Buttons</a></li>
+            
+              <li class="menu-item"><a href="#colors" data-scroll>Colors</a></li>
+            
+              <li class="menu-item"><a href="#node-compact" data-scroll>Node compact</a></li>
+            
+              <li class="menu-item"><a href="#typography" data-scroll>Typography</a></li>
+            
             </ul>
           </nav>
         </div>
@@ -39,9 +45,175 @@
 
       <main id="main" role="main">
 
-        <div class="wrapper">
+        <div class="section">
+<h1 id="breadcrumbs" class="styleguide">Breadcrumbs</h1>
+<p class="styleguide">Breadcrumbs can be found on each page except the homepage. Since it is used  for navigation we use the <code class="styleguide">&lt;nav&gt;</code> element.</p><div class="codeExample">
+  <div class="exampleOutput">
+      <nav class="breadcrumb" role="navigation">
+    <div class="wrapper">
+      <span class="item first"><a href="/">home</a></span>
+      <span class="separator">></span>
+      <span class="item"><a href="/oplossingen">oplossingen</a></span>
+    </div>
+  </nav>
 
-<h1>Hello people!</h1>
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"breadcrumb"</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"item first"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>home<span class="nt">&lt;/a&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span>&gt;<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/oplossingen"</span><span class="nt">&gt;</span>oplossingen<span class="nt">&lt;/a&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="buttons" class="styleguide">Buttons</h1>
+<p class="styleguide">Button styles can be applied to any element. Typically you&#39;ll want to
+use either a <code class="styleguide">&lt;button&gt;</code> or an <code class="styleguide">&lt;a&gt;</code> element:</p><div class="codeExample">
+  <div class="exampleOutput">
+    
+<button class="button">Click</button>
+<a class="button" href="http://www.goalgorilla.com">Don't click</a>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>Click<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">href=</span><span class="s">"http://www.goalgorilla.com"</span><span class="nt">&gt;</span>Don't click<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <span class="readmore-arrow"></span>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"readmore-arrow"</span><span class="nt">&gt;&lt;/span&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="colors" class="styleguide">Colors</h1>
+<p class="styleguide">We have a few colors that can be used in various contexts.</p>
+<section class="cardbox">
+  <div class='cardholder'>
+    <div class='card'>
+      <div class='color' style='background: #000000'>#000000</div>
+      <h3>$black</h3>
+    </div>
+  </div>
+  <div class='cardholder'>
+    <div class='card'>
+      <div class='color' style='background: #FFFFFF; color: #000000'>#FFFFFF</div>
+      <h3>$white</h3>
+    </div>
+  </div>
+  <div class='cardholder'>
+    <div class='card'>
+      <div class='color' style='background: #36a9e0'>#36a9e0</div>
+      <h3>$blue</h3>
+    </div>
+  </div>
+  <div class='cardholder'>
+    <div class='card'>
+      <div class='color' style='background: #d9d9d9'>#d9d9d9</div>
+      <h3>$grey</h3>
+    </div>
+  </div>
+  <div class='cardholder'>
+    <div class='card'>
+      <div class='color' style='background: #ECECEC'>#ECECEC</div>
+      <h3>$lightgrey</h3>
+    </div>
+  </div>
+</section>
+
+<h1 id="node-compact" class="styleguide">Node compact</h1>
+<p class="styleguide">Compact nodes are used to display on overview of nodes, like news and services.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="view-solutions">
+  <div class="views-row">
+    <a href="#" class="node-compact">
+      <header>
+        <h2> Service title </h2>
+      </header>
+      <article>
+        <span class="node-button-area"><span class="readmore-arrow"></span> <span class="button"> Bekijk deze oplossing </span></span>
+      </article>
+    </a>
+  </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"view-solutions"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"views-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"node-compact"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;header&gt;</span>
+        <span class="nt">&lt;h2&gt;</span> Service title <span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;article&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"node-button-area"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"readmore-arrow"</span><span class="nt">&gt;&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span> Bekijk deze oplossing <span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/article&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="typography" class="styleguide">Typography</h1>
+<p class="styleguide">These are the heading sizes that you can use site wide.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <h1 class="heading1">This is an heading 1 element</h1>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"heading1"</span><span class="nt">&gt;</span>This is an heading 1 element<span class="nt">&lt;/h1&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <h2 class="heading2">This is an heading 2 element</h2>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"heading2"</span><span class="nt">&gt;</span>This is an heading 2 element<span class="nt">&lt;/h2&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <h3 class="heading3">This is an heading 3 element</h3>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"heading3"</span><span class="nt">&gt;</span>This is an heading 3 element<span class="nt">&lt;/h3&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <p>Je wilt graag je users bereiken en binden aan je merk. Om dat te bereiken halen we alles uit de kast. We gebruiken onze eigen krachten waar nodig om jouw doelstellingen te behalen. Ontdek hoe compleet we zijn.</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;p&gt;</span>Je wilt graag je users bereiken en binden aan je merk. Om dat te bereiken halen we alles uit de kast. We gebruiken onze eigen krachten waar nodig om jouw doelstellingen te behalen. Ontdek hoe compleet we zijn.<span class="nt">&lt;/p&gt;</span></pre>
+    </div>
+  </div>
+</div>
         </div>
       </main>
       <footer class="footer" role="contentinfo">
@@ -51,5 +223,7 @@
         </div>
       </footer>
     </div>
+    <!-- menu scripts -->
+    <script src="build/script/components.js"></script>
   </body>
 </html>

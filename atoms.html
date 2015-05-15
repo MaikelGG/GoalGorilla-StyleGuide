@@ -15,9 +15,6 @@
     <!-- CSS to be documented -->
     <link rel="stylesheet" href="build/css/styles.css">
 
-    <!-- component js and init scripts -->
-    <script src="build/script/components.js"></script>
-
   </head>
   <body>
     <div id="page">
@@ -29,9 +26,10 @@
           </a>
           <nav class="nav-collapse" data-scroll-header>
             <ul>
-              
-                <li class="menu-item"><a href="atoms.html">Atoms</a></li>
-              
+            <li class="menu-item visually-hidden"><a href="#main" data-scroll>home</a></li>
+            
+              <li class="menu-item"><a href="#typography" data-scroll>Typography</a></li>
+            
             </ul>
           </nav>
         </div>
@@ -39,43 +37,7 @@
 
       <main id="main" role="main">
 
-        <div class="wrapper">
-
-<h1 id="colors" class="styleguide">Colors</h1>
-<p class="styleguide">We have a few colors that can be used in various contexts.</p>
-<section class="cardbox">
-  <div class='cardholder'>
-    <div class='card'>
-      <div class='color' style='background: #000000'>#000000</div>
-      <h3>$black</h3>
-    </div>
-  </div>
-  <div class='cardholder'>
-    <div class='card'>
-      <div class='color' style='background: #FFFFFF; color: #000000'>#FFFFFF</div>
-      <h3>$white</h3>
-    </div>
-  </div>
-  <div class='cardholder'>
-    <div class='card'>
-      <div class='color' style='background: #36a9e0'>#36a9e0</div>
-      <h3>$blue</h3>
-    </div>
-  </div>
-  <div class='cardholder'>
-    <div class='card'>
-      <div class='color' style='background: #d9d9d9'>#d9d9d9</div>
-      <h3>$grey</h3>
-    </div>
-  </div>
-  <div class='cardholder'>
-    <div class='card'>
-      <div class='color' style='background: #ECECEC'>#ECECEC</div>
-      <h3>$lightgrey</h3>
-    </div>
-  </div>
-</section>
-
+        <div class="section">
 <h1 id="typography" class="styleguide">Typography</h1>
 <p class="styleguide">These are the heading sizes that you can use site wide.</p><div class="codeExample">
   <div class="exampleOutput">
@@ -130,5 +92,7 @@
         </div>
       </footer>
     </div>
+    <!-- menu scripts -->
+    <script src="build/script/components.js"></script>
   </body>
 </html>
