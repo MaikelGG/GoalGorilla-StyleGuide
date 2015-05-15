@@ -11,26 +11,44 @@
     <!-- Styleguide CSS -->
     <link type="text/css" rel="stylesheet" href="static/css/docs.css">
     <link type="text/css" rel="stylesheet" href="static/css/github.css">
+
+    <!-- CSS to be documented -->
+    <link rel="stylesheet" href="build/css/styles.css">
+
+    <!-- component js and init scripts -->
+    <script src="build/script/components.js"></script>
+
   </head>
   <body>
-    <div>
-      <nav>
-        <ul>
-        
-          <li><a href="base_css.html">Base CSS</a></li>
-        
-        </ul>
-      </nav>
+    <div id="page">
 
-      <h1>a brand new style guide, it's super effective</h1>
-      <section class="content">
-        <ul>
-        
-        </ul>
+      <header class="header" id="header" aria-label="Site navigation" >
+        <div class="wrapper">
+          <a href="#main" title="Home" rel="home" class="site-logo" data-scroll="">
+            <img src="http://www.goalgorilla.com/themes/custom/gg/logo.png" alt="Home" />
+          </a>
+          <nav class="nav-collapse" data-scroll-header>
+            <ul>
+              
+                <li class="menu-item"><a href="atoms.html">Atoms</a></li>
+              
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main" role="main">
+
+        <div class="wrapper">
+
 <h1>Hello people!</h1>
-      </section>
-      <footer>
-        <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
+        </div>
+      </main>
+      <footer class="footer" role="contentinfo">
+        <div class="wrapper">
+          <a href="#" class="footer-link pull-left">Algemene voorwaarden</a>
+          <span class="pull-right"> &copy; Copyright 2015, GoalGorilla</span>
+        </div>
       </footer>
     </div>
   </body>
